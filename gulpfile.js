@@ -8,7 +8,8 @@ gulp.task( 'es6', () => {
 
   .pipe(sourcemaps.init())
   .pipe(babel({
-    presets: ['es2015']
+    presets: ['es2015'],
+    compact: true
   }))
   .pipe(sourcemaps.write('.'))
 
