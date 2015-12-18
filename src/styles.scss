@@ -1,3 +1,13 @@
 body {
   background: #F6CF48;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+text-editor {
+  background: #fff;
+  padding: 20px;
 }
