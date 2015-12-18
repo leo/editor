@@ -1,18 +1,26 @@
 (function(){
 
-  window.addEventListener( 'load', () => {
+  window.addEventListener('load', () => {
+
     if( document.contentEditable != undefined && document.execCommand != undefined ) {
-      alert( 'Get me HTML5!' );
+      console.error( 'HTML5 not supported!' );
     } else {
       document.execCommand( 'styleWithCSS', false, true );
     }
+
   }, false);
 
-  var underlineButton = document.querySelector( 'a[href="#underline"]' );
+  const buttons = document.querySelectorAll( 'text-editor nav a' );
 
-  underlineButton.addEventListener( 'click', (event) => {
-    document.execCommand( 'underline', false, null );
+  function runCommand( event ) {
+    var method = this.getAttribute( 'href' ).split( '#' )[1];
+
+    document.execCommand( method, false, null );
     event.preventDefault();
-  });
+  }
+
+  for (var i = 0; i < buttons.length; i++ ) {
+    buttons[i].addEventListener( 'click', runCommand );
+  }
 
 })();

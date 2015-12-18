@@ -3,8 +3,11 @@
 
   <head>
     <title>Editor</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="dist/styles.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="dist/styles.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -12,12 +15,14 @@
     <text-editor>
 
       <nav>
-        <a href="#underline">Underline</a>
-        <a href="#bold">Bold</a>
+        <a href="#bold" class="fa fa-bold"></a>
+        <a href="#italic" class="fa fa-italic"></a>
+        <a href="#underline" class="fa fa-underline"></a>
       </nav>
 
       <main contenteditable>
-        I'm the content at this time!
+        <p>Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Maecenas faucibus mollis interdum.</p>
+        <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
       </main>
 
     </text-editor>
