@@ -46,3 +46,5 @@ gulp.task( 'watch', () => {
   gulp.watch( 'index.js', [server.run] );
 
 });
+
+gulp.task( 'default', ['es6', 'sass', 'watch'] );
