@@ -3,7 +3,7 @@ const app = module.exports.app = exports.app = express();
 const opn = require('opn');
 
 app.use( require('connect-livereload')() );
-app.use( '/assets', express.static('dist') );
+app.use( '/assets', express.static('public') );
 
 app.get('/', function(req, res) {
   res.sendFile( __dirname + '/src/index.html' );

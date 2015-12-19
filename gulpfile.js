@@ -15,7 +15,7 @@ gulp.task( 'es6', () => {
   }))
   .pipe(sourcemaps.write('.'))
 
-  .pipe( gulp.dest( 'dist' ) )
+  .pipe( gulp.dest( 'public' ) )
   .pipe( server.notify() );
 
 });
@@ -30,7 +30,7 @@ gulp.task( 'sass', () => {
   }).on( 'error', sass.logError ) )
   .pipe(sourcemaps.write('.'))
 
-  .pipe( gulp.dest('dist') )
+  .pipe( gulp.dest('public') )
   .pipe( server.notify() );
 
 });
