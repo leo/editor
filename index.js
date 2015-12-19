@@ -1,6 +1,6 @@
-const express = require('express');
-const app = module.exports.app = exports.app = express();
-const opn = require('opn');
+const express = require('express'),
+      app = module.exports.app = exports.app = express(),
+      opn = require('opn');
 
 app.use( require('connect-livereload')() );
 app.use( '/assets', express.static('public') );
@@ -11,8 +11,8 @@ app.get('/', function(req, res) {
 
 app.listen(5670, function() {
 
-  const port = this.address().port;
-  const url = 'http://localhost:' + port;
+  const port = this.address().port,
+        url = 'http://localhost:' + port;
 
   console.log( 'Editor is running at ' + url );
   opn( url );

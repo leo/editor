@@ -1,8 +1,8 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const babel = require('gulp-babel');
-const sourcemaps = require('gulp-sourcemaps');
-const server = require('gulp-express');
+const gulp = require('gulp'),
+      sass = require('gulp-sass'),
+      babel = require('gulp-babel'),
+      sourcemaps = require('gulp-sourcemaps');
+      server = require('gulp-express');
 
 gulp.task( 'es6', () => {
 
