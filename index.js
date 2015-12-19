@@ -8,7 +8,7 @@ app.get('/', function(req, res) {
   res.sendFile( __dirname + '/src/index.html' );
 });
 
-app.listen(3000, function () {
+app.listen(5670, function () {
   var port = this.address().port;
   console.log( 'Editor is running at http://localhost:%s', port );
 });

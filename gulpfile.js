@@ -34,6 +34,7 @@ gulp.task( 'sass', () => {
 gulp.task( 'watch', () => {
 
   server.run( ['index.js'] );
+  open({uri: 'http://localhost:5670'})
 
   gulp.watch( 'src/*.html', server.notify );
   gulp.watch( 'src/*.scss', ['sass'] );
