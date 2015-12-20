@@ -1,8 +1,9 @@
 const gulp = require('gulp'),
       sass = require('gulp-sass'),
       babel = require('gulp-babel'),
-      sourcemaps = require('gulp-sourcemaps');
-      server = require('gulp-express');
+      sourcemaps = require('gulp-sourcemaps'),
+      gls = require('gulp-live-server'),
+      server = gls.new('index.js');
 
 gulp.task( 'es6', () => {
 
@@ -15,8 +16,7 @@ gulp.task( 'es6', () => {
   }))
   .pipe(sourcemaps.write('.'))
 
-  .pipe( gulp.dest( 'public' ) )
-  .pipe( server.notify() );
+  .pipe( gulp.dest( 'public' ) );
 
 });
 
@@ -30,20 +30,23 @@ gulp.task( 'sass', () => {
   }).on( 'error', sass.logError ) )
   .pipe(sourcemaps.write('.'))
 
-  .pipe( gulp.dest('public') )
-  .pipe( server.notify() );
+  .pipe( gulp.dest('public') );
 
 });
 
 gulp.task( 'watch', () => {
 
-  server.run( ['index.js'] );
+  function notifyServer(file) {
+    server.notify.apply( server, [file] );
+  }
 
-  gulp.watch( 'src/*.html', server.notify );
-  gulp.watch( 'src/*.scss', ['sass'] );
-  gulp.watch( 'src/*.js', ['es6'] );
+  server.start();
 
-  gulp.watch( 'index.js', [server.run] );
+  gulp.watch( 'src/index.html', notifyServer );
+  gulp.watch( 'src/*.scss', ['sass'], notifyServer );
+  gulp.watch( 'src/*.js', ['es6'], notifyServer );
+
+  gulp.watch( 'index.js', server.start.bind(server) );
 
 });
 
