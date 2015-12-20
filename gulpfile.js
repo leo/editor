@@ -5,7 +5,7 @@ const gulp = require('gulp'),
       gls = require('gulp-live-server'),
       server = gls.new('index.js');
 
-gulp.task( 'es6', () => {
+gulp.task( 'js', () => {
 
   return gulp.src( 'src/**/*.js' )
 
@@ -20,7 +20,7 @@ gulp.task( 'es6', () => {
 
 });
 
-gulp.task( 'sass', () => {
+gulp.task( 'scss', () => {
 
   return gulp.src( 'src/**/*.scss' )
 
@@ -36,18 +36,28 @@ gulp.task( 'sass', () => {
 
 gulp.task( 'watch', () => {
 
-  function notifyServer(file) {
-    server.notify.apply( server, [file] );
-  }
-
   server.start();
 
-  gulp.watch( 'src/index.html', notifyServer );
-  gulp.watch( 'src/*.scss', ['sass'], notifyServer );
-  gulp.watch( 'src/*.js', ['es6'], notifyServer );
+  function notifyServer(file) {
 
-  gulp.watch( 'index.js', server.start.bind(server) );
+    var ext = file.path.split('.').pop();
+
+    if(ext == 'scss' || ext == 'js') {
+      gulp.run( ext );
+    }
+
+    server.notify.apply( server, [file] );
+
+  }
+
+  gulp.watch('src/index.html', notifyServer);
+  gulp.watch('src/*.scss', notifyServer);
+  gulp.watch('src/*.js', notifyServer);
+
+  gulp.watch('index.js', function() {
+    server.start.bind(server)()
+  });
 
 });
 
-gulp.task( 'default', ['es6', 'sass', 'watch'] );
+gulp.task( 'default', ['js', 'scss', 'watch'] );
