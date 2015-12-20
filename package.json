@@ -1,25 +1,25 @@
 {
-  "name": "editor",
+  "name": "dago",
   "version": "0.1.0",
-  "description": "Edit stuff",
+  "description": "WYSIWYG using the latest web technologies",
   "main": "index.js",
   "scripts": {
     "start": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leo/editor.git"
+    "url": "git+https://github.com/leo/dago.git"
   },
   "keywords": [
     "editor",
     "wysiwyg"
   ],
-  "author": "Leonard Lamprecht <lamprechtleonard@gmail.com> (https://leo.im)",
+  "author": "Leonard Lamprecht <mindrun@icloud.com> (https://leo.im)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leo/editor/issues"
+    "url": "https://github.com/leo/dago/issues"
   },
-  "homepage": "https://github.com/leo/editor#readme",
+  "homepage": "https://github.com/leo/dago#readme",
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "connect-livereload": "^0.5.4",
