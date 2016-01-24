@@ -1,5 +1,5 @@
 {
-  "name": "dago",
+  "name": "editor",
   "version": "0.1.0",
   "description": "WYSIWYG using the latest web technologies",
   "main": "index.js",
