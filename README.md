@@ -21,6 +21,6 @@ npm install
 Let's go! :horse:
 
 ```shell
+npm run build   # Build the assets
 npm start       # Serve the editor on port 4200
-npm run bild    # Build the assets
 ```
