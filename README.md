@@ -11,15 +11,16 @@ git clone https://github.com/leo/editor.git
 cd editor
 ```
 
-Install gulp and all other dependencies
+Install broccoli and all other dependencies
 
 ```shell
-npm install -g gulp
+npm install -g broccoli
 npm install
 ```
 
 Let's go! :horse:
 
 ```shell
-npm start
+npm start       # Serve the editor on port 4200
+npm run bild    # Build the assets
 ```

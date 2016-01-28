@@ -4,7 +4,8 @@
   "description": "WYSIWYG using the latest web technologies",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "broccoli serve",
+    "build": "broccoli build"
   },
   "repository": {
     "type": "git",
