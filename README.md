@@ -14,7 +14,7 @@ cd editor
 Install broccoli and all other dependencies
 
 ```shell
-npm install -g broccoli
+npm install -g broccoli-cli
 npm install
 ```
 
