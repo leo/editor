@@ -15,7 +15,7 @@ const statics = pickFiles(sourceDir, {
   destDir: '/'
 });
 
-const styles = compileSass([sourceDir], 'styles.scss', 'assets/styles.css', {
+const styles = compileSass([sourceDir], 'styles.scss', 'styles.css', {
   outputStyle: 'compressed'
 });
 
