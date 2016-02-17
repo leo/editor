@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leo/dago.git"
+    "url": "git+https://github.com/leo/editor.git"
   },
   "keywords": [
     "editor",
     "wysiwyg"
   ],
-  "author": "Leonard Lamprecht <mindrun@icloud.com> (https://leo.im)",
+  "author": "Leonard Lamprecht <mindrun@icloud.com> (http://leo.im)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/leo/editor/issues"
