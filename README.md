@@ -13,7 +13,7 @@ git clone https://github.com/leo/editor.git
 cd editor
 ```
 
-Install broccoli and all other dependencies
+Install [broccoli](http://broccolijs.com) and all other dependencies
 
 ```shell
 npm install -g broccoli-cli
