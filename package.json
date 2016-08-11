@@ -23,7 +23,7 @@
   "homepage": "https://github.com/leo/editor#readme",
   "devDependencies": {
     "broccoli": "^0.16.9",
-    "broccoli-babel-transpiler": "^5.5.1",
+    "broccoli-babel-transpiler": "^5.6.0",
     "broccoli-merge-trees": "^1.1.4",
     "broccoli-sass": "^0.7.0",
     "broccoli-static-compiler": "^0.2.2"
